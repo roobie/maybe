@@ -8,6 +8,8 @@ It's a small module, so check the source code for the public API.
 ## Example
 
 ```janet
+(import maybe)
+
 (defn complex-arithmetics
   [maybe-val]
   (maybe/map maybe-val
@@ -24,7 +26,7 @@ It's a small module, so check the source code for the public API.
     (match {:just result} (printf "v0 Result: %d" result)
            {:nothing _} (print "v0 There was no value")))
 
-(-> v1 # Just, so arithmetic WILL run
+(-> v1 # Just, so the lambda in complex-arithmetics WILL run
     (complex-arithmetics)
     # Here, we use the alternative maybe/match instead of match
     (maybe/match :just (fn [result] (printf "v1 Result: %d" result))
