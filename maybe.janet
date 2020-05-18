@@ -75,7 +75,9 @@
 
 
 (defn unwrap
-  "Extracts value from the supplied Maybe. If it's Nothing, then this function will evalueate to nil. Otherwise it will evaluate to the wrapped value."
+  "Extracts the value from the supplied Maybe. If it's Nothing, then this
+  function will evaluate to nil. Otherwise it will evaluate to the wrapped
+  value."
   [m]
   (get m :just nil))
 
