@@ -6,4 +6,4 @@
  :url "https://github.com/roobie/maybe.janet"
  :repo "git+https://github.com/roobie/maybe.janet.git")
 
-(declare-source :source ["maybe"])
+(declare-source :source ["maybe.janet"])
