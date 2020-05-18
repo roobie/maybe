@@ -74,6 +74,11 @@
     ((to-fn nothing-f))))
 
 
+(defn unwrap
+  "Extracts value from the supplied Maybe. If it's Nothing, then this function will evalueate to nil. Otherwise it will evaluate to the wrapped value."
+  [m]
+  (get m :just nil))
+
 (defn unwrap!
   "Extracts value from the supplied Maybe. If it's Nothing, an error will be
   signalled (hence the bang! in the name)."
